@@ -10,8 +10,8 @@
 --------------------------------------------------------------*/
 
 body {
-  background: #fff;
-  color: #444;
+  background: #666;
+  color: #515151;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -135,20 +135,24 @@ h6 {
 }
 
 #topbar .social-links a {
-  color: #535074;
+  color: #fff;
   padding: 4px 12px;
   display: inline-block;
   line-height: 1px;
 }
 
 #topbar .social-links a:hover {
-  color: #1bb1dc;
+  color: #fff;
+  text-decoration: underline;
 }
 
 #topbar .social-links a:first-child {
   border-left: 0;
 }
 
+#topbar .social-links i{
+  padding-right: 6px;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -171,7 +175,7 @@ h6 {
 #header.header-pages {
   height: 70px;
   padding: 15px 0;
-  background-color: #fff;
+  background-color: #666;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 
@@ -192,7 +196,7 @@ h6 {
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
-  color: #413e66;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -214,15 +218,19 @@ h6 {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
+  background: #f5f8fd url("../img/background/sunset1.jpg") center top no-repeat;
   background-size: cover;
 }
 
 #intro .intro-info h2 {
-  color: #413e66;
+  color: #fff;
   margin-bottom: 40px;
   font-size: 48px;
   font-weight: 700;
+}
+
+#intro h3{
+  color: #fff;
 }
 
 #intro .intro-info h2 span {
@@ -277,7 +285,7 @@ h6 {
 .main-nav a {
   display: block;
   position: relative;
-  color: #413e66;
+  color: #fff;
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 14px;
@@ -473,7 +481,7 @@ h6 {
 
 .section-header h3 {
   font-size: 36px;
-  color: #413e66;
+  color: #0a98c0;
   text-align: center;
   font-weight: 700;
   position: relative;
@@ -485,7 +493,7 @@ h6 {
   margin: auto;
   font-size: 15px;
   padding-bottom: 60px;
-  color: #535074;
+  color: #515151;
   width: 50%;
 }
 
@@ -493,7 +501,7 @@ h6 {
 --------------------------------*/
 
 .section-bg {
-  background: #f5f8fd;
+  background: #ebeced;
 }
 
 /* About Us Section
@@ -501,6 +509,7 @@ h6 {
 
 #about {
   padding: 80px 0;
+  background-color: #fff;
 }
 
 #about .about-content {
@@ -508,13 +517,13 @@ h6 {
 }
 
 #about .about-content h2 {
-  color: #413e66;
+  color: #0a98c0;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 #about .about-content h3 {
-  color: #696592;
+  color: #515151;
   font-weight: 400;
   font-size: 22px;
   font-style: italic;
@@ -731,6 +740,7 @@ h6 {
 
 #features {
   padding: 80px 0;
+  background-color: #fff;
 }
 
 #features h4 {
@@ -885,6 +895,7 @@ h6 {
 
 #testimonials {
   padding: 60px 0;
+  background-color: #fff;
 }
 
 #testimonials .section-header {
@@ -1451,6 +1462,7 @@ h6 {
 #contact {
   /* background: #f7f7f7; */
   padding: 80px 0 40px 0;
+  background-color: #fff;
 }
 
 #contact #google-map {
