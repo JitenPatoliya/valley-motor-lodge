@@ -378,7 +378,7 @@ h6 {
   left: -260px;
   width: 260px;
   padding-top: 18px;
-  background: rgba(40, 38, 70, 0.8);
+  background: rgba(102, 102, 102, 0.8);
   transition: 0.4s;
 }
 
@@ -445,7 +445,7 @@ h6 {
 
 .mobile-nav-toggle i {
   margin: 18px 18px 0 0;
-  color: #065e77;
+  color: #fff;
 }
 
 .mobile-nav-overly {
@@ -455,7 +455,7 @@ h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(40, 38, 70, 0.8);
+  background: rgba(102, 102, 102, 0.8);
   overflow: hidden;
   display: none;
 }
@@ -1564,7 +1564,6 @@ h6 {
   background: #51d8ad;
 }
 
-
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -1686,4 +1685,9 @@ h6 {
   #footer .footer-top .social-links a {
     margin-bottom: 25px;
   }
+  
+  #gmap {
+    padding-top: 10px;
+  }
+
 }
