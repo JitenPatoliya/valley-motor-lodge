@@ -176,7 +176,8 @@ h6 {
 #header.header-pages {
   height: 70px;
   padding: 15px 0;
-  background-color: #666;
+  /* background-color: #666; */
+  background-color:#91705e;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 
@@ -203,8 +204,10 @@ h6 {
 
 #header .logo img {
   padding: 0;
-  margin: 7px 0;
-  max-height: 26px;
+  /* margin: 7px 0;
+  max-height: 26px; */
+  max-height: 60px;
+  margin: -12px 0;
 }
 
 .main-pages {
@@ -234,7 +237,8 @@ h6 {
   color: #fff;
 }
 
-#intro .intro-info h2 span {
+#intro .intro-info h2 span,
+#intro .intro-info h3 span {
   color: #1bb1dc;
 }
 
@@ -305,7 +309,7 @@ h6 {
 .main-nav a:hover,
 .main-nav .active > a,
 .main-nav li:hover > a {
-  color: #1bb1dc;
+  color: #090909;
   text-decoration: underline;
 }
 
