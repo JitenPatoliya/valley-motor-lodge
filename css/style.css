@@ -177,7 +177,7 @@ h6 {
   height: 70px;
   padding: 15px 0;
   /* background-color: #666; */
-  background-color:#91705e;
+  background-color:#666666;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 
@@ -309,8 +309,9 @@ h6 {
 .main-nav a:hover,
 .main-nav .active > a,
 .main-nav li:hover > a {
-  color: #090909;
+  /* color: #090909; */
   text-decoration: underline;
+  background-color: #aeb3b7;
 }
 
 .main-nav .drop-down ul {
@@ -514,6 +515,10 @@ h6 {
 
 .section-bg {
   background: #ebeced;
+}
+
+.section-bg-alt {
+  background: #fff;
 }
 
 /* About Us Section
@@ -750,12 +755,12 @@ h6 {
 /* Features Section
 --------------------------------*/
 
-#features {
+#features, #SendUsMessage {
   padding: 40px 0;
   background-color: #fff;
 }
 
-#features h4 {
+#features h4, #SendUsMessage h4 {
   font-weight: 600;
   font-size: 24px;
 }
@@ -1474,7 +1479,7 @@ h6 {
 #contact {
   /* background: #f7f7f7; */
   padding: 40px 0 40px 0;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 #contact #google-map {
@@ -1565,7 +1570,7 @@ h6 {
 }
 
 #contact .form button[type="submit"] {
-  background: #2dc997;
+  background: #0a98c0;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1573,7 +1578,7 @@ h6 {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #51d8ad;
+  background: #666666;
 }
 
 /*--------------------------------------------------------------

@@ -88,7 +88,10 @@
     <div class="container">
 
       <div class="logo float-left">
-        <img src="img/logo-v1.png" alt="" class="">
+        <a class="home-link" href="#intro" title="Valley Motor Lodge">
+          <img src="img/Final_Logo.png" alt="" class="">
+        </a>
+        
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <h1 class="text-light"><a href="#intro" class="scrollto"><span>Valley Motor Lodge</span></a>
           <a href="#header" class="scrollto"></a>
@@ -532,13 +535,72 @@
       </div>
     </section><!-- #testimonials -->
 
+    
   </main>
 
   <!--==========================
     Footer
   ============================-->
   <footer id="footer" class="">
-    <section id="contact">
+    <!--==========================
+      Send us message
+    ============================-->
+    <section id="contact" class="section-bg-alt">
+      <div class="container">
+        <header class="section-header">
+          <h3>Send us message</h3>
+        </header>
+        <div class="row feature-item">
+          
+          <div class="col-lg-5 col-md-5">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage">Sending message failed. Something went wrong!</div>
+              <form id="contactForm" class="contactForm">
+                <div class="form-group">
+                  <label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" maxlength="50"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" maxlength="50"
+                     data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <label><i class="fa fa-phone" aria-hidden="true"></i> Phone</label>
+                  <input type="text" class="form-control" name="phone" id="phone-number" placeholder="(XXX) XXX-XXXX" maxlength="15"
+                     data-rule="phone" data-msg="Please enter a valid phone number" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <label><i class="fa fa-comment" aria-hidden="true"></i> Message</label>
+                  <textarea class="form-control" name="message" rows="5" maxlength="500" 
+                    data-rule="required" data-msg="Please enter a message" placeholder="Please add your contact info if enquiring for booking!"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4"></div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <a class="weatherwidget-io" href="https://forecast7.com/en/50d25n99d84/minnedosa/" 
+                data-label_1="MINNEDOSA" data-label_2="WEATHER" data-days="3" data-theme="gray" >MINNEDOSA Weather</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section><!-- #about -->
+
+    <section id="contact" class="section-bg">
       <div class="container wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;height: 65px;">
         <div class="section-header">
           <h3 class="section-title">Contact Us</h3>
@@ -549,10 +611,10 @@
       <!-- Uncomment below if you wan to use dynamic maps -->
       
       <div class="container wow fadeInUp mt-1" style="visibility: visible; animation-name: fadeInUp;">
+
         <div class="row justify-content-center">
-
-          <div class="col-lg-3 col-md-4">
-
+          
+          <div class="col-lg-4 col-md-4">
             <div class="info">
               <div>
                 <i class="fa fa-map-marker"></i>
@@ -568,21 +630,18 @@
                 <i class="fa fa-phone"></i>
                 <p>+1 204 867-5858</p>
               </div>
-              <div>
-                <a class="weatherwidget-io" href="https://forecast7.com/en/50d25n99d84/minnedosa/" 
-                data-label_1="MINNEDOSA" data-label_2="WEATHER" data-days="3" data-theme="gray" >MINNEDOSA Weather</a>
-              </div>
             </div>
-
           </div>
 
-          <div class="col-lg-9 col-md-8">
+          <div class="col-lg-8 col-md-8">
             <div id="gmap">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.2401456132993!2d-99.84040168430958!3d50.25009897944822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52e7cb27a6aee6bb%3A0xb6019c723ba5eeb6!2sValley%20Motor%20Lodge!5e0!3m2!1sen!2sca!4v1614453390969!5m2!1sen!2sca" 
               width="100%" height="475" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
-        </div>
+
+         </div>
+
       </div>
     </section>
     
@@ -612,6 +671,63 @@
 
   <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+
+    $('#phone-number', '#contactForm')
+
+.keydown(function (e) {
+    var key = e.which || e.charCode || e.keyCode || 0;
+    $phone = $(this);
+
+    // Don't let them remove the starting '('
+    if ($phone.val().length === 1 && (key === 8 || key === 46)) {
+        $phone.val('('); 
+        return false;
+    } 
+    // Reset if they highlight and type over first char.
+    else if ($phone.val().charAt(0) !== '(') {
+        $phone.val('('+$phone.val()); 
+    }
+
+    // Auto-format- do not expose the mask as the user begins to type
+    if (key !== 8 && key !== 9) {
+        if ($phone.val().length === 4) {
+            $phone.val($phone.val() + ')');
+        }
+        if ($phone.val().length === 5) {
+            $phone.val($phone.val() + ' ');
+        }           
+        if ($phone.val().length === 9) {
+            $phone.val($phone.val() + '-');
+        }
+    }
+
+    // Allow numeric (and tab, backspace, delete) keys only
+    return (key == 8 || 
+            key == 9 ||
+            key == 46 ||
+            (key >= 48 && key <= 57) ||
+            (key >= 96 && key <= 105)); 
+})
+
+.bind('focus click', function () {
+    $phone = $(this);
+
+    if ($phone.val().length === 0) {
+        $phone.val('(');
+    }
+    else {
+        var val = $phone.val();
+        $phone.val('').val(val); // Ensure cursor remains at the end
+    }
+})
+
+.blur(function () {
+    $phone = $(this);
+
+    if ($phone.val() === '(') {
+        $phone.val('');
+    }
+});
   </script>
 </body>
 </html>
